@@ -48,16 +48,14 @@ Publish the website in the given URL.
                 margin-left: auto;
                 margin-right: auto;
                 padding-top: 200px;
-                padding-left: 300px;
-}
+                padding-left: 300px;}
             .box {
                 display:block;
                 border: Thick dashed lime;
                 width: 500px;
                 min-height: 300px;
                 font-size: 20px;
-                background-color: pink;
-}
+                background-color: pink;}
             .formelt{
                 color: Red;
                 text-align: center;
@@ -69,7 +67,7 @@ Publish the website in the given URL.
 
     </head>
     <body bgcolor="blue">
-        <div class="edge">
+    <div class="edge">
         <div class="box">
         <h1>Area of Cylinder</h1>
         <form method="POST">
