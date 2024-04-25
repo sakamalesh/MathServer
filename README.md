@@ -98,39 +98,42 @@ Publish the website in the given URL.
 ## SERVER SIDE PROCESSING:
 
 ## Views.py:
-from django.shortcuts import render
-import math
-def cyndarea(request):
-    context={}
-    context['area']="0"
-    context['l']="0"
-    context['r']="0"
-    if request.method == 'POST':
-        print("POST method is used")
-        l = request.POST.get('length','0')
-        r = request.POST.get('radius','0')
-        print('request=',request)
-        print('Length=',l)
-        print('Radius=',r)
-        area = 2*math.pi*float(r)*float(l) + 2*math.pi*float(r)*float(r)
-        context['area'] = area
-        context['l'] = l
-        context['r'] = r
-        print('Area=',float(area))
-    return render(request,'app5/math.html',context)
+'''
+ 
+    from django.shortcuts import render
+    import math
+    def cyndarea(request):
+        context={}
+        context['area']="0"
+        context['l']="0"
+        context['r']="0"
+        if request.method == 'POST':
+            print("POST method is used")
+            l = request.POST.get('length','0')
+            r = request.POST.get('radius','0')
+            print('request=',request)
+            print('Length=',l)
+            print('Radius=',r)
+            area = 2*math.pi*float(r)*float(l) + 2*math.pi*float(r)*float(r)
+            context['area'] = area
+            context['l'] = l
+            context['r'] = r
+            print('Area=',float(area))
+        return render(request,'app5/math.html',context)
+    '''
 
 
-## urls.ppy
+## urls.py
 
-from django.contrib import admin
-from django.urls import path
-from app5 import views
-urlpatterns=[
-    path('admin/',admin.site.urls),
-    path('areaofcylinder/',views.cyndarea,name="AreaofCylinder"),
-    path('',views.cyndarea,name="AreaofCylinderroot")
-]
-
+    from django.contrib import admin
+    from django.urls import path
+    from app5 import views
+    urlpatterns=[
+        path('admin/',admin.site.urls),
+        path('areaofcylinder/',views.cyndarea,name="AreaofCylinder"),
+        path('',views.cyndarea,name="AreaofCylinderroot")
+    ]
+    
 
 ## HOMEPAGE:
 ![alt text](<Screenshot 2024-04-17 171919.png>)
