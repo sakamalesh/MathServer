@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            h1{
+                color: red;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-align: center;
+
+            }
+            .edge {
+                 width: 1080px;       
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 200px;
+                padding-left: 300px;
+}
+            .box {
+                display:block;
+                border: Thick dashed lime;
+                width: 500px;
+                min-height: 300px;
+                font-size: 20px;
+                background-color: pink;
+}
+            .formelt{
+                color: Red;
+                text-align: center;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        </style>
+
+    </head>
+    <body bgcolor="blue">
+        <div class="edge">
+        <div class="box">
+        <h1>Area of Cylinder</h1>
+        <form method="POST">
+        {% csrf_token %}
+        <div class="formelt">
+        length : <input type="text" name="length" value="{{l}}"></input>(in m)<br/>
+        </div>
+        <div class="formelt">
+        radius : <input type="text" name="radius" value="{{r}}"></input>(in m)<br/>
+        </div>
+        <div class="formelt">
+            <input type="submit" value="Calculate"></input><br/>
+        </div>
+        <div class="formelt">
+            
+            Area: <input type="text" name="radius" value="{{area}}"></input>m<sup>2</sup><br/>
+        </div>
+
+        </form>
+
+        </div>
+        </div>
+    </body>
+</html>
